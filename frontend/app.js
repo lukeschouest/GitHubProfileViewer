@@ -4,5 +4,9 @@ const result = document.getElementById("result");
 
 lookupButton.addEventListener("click", () => {
   const username = usernameInput.value.trim();
+  if (username === "") {
+    result.textContent = "Please enter a GitHub username.";
+    return;
+  }
   result.textContent = "You entered: " + username;
 });
